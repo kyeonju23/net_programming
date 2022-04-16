@@ -18,7 +18,8 @@ def server_task(sock, addr):
             if sock in clients:
                 print(addr, ': exited')
                 clients.remove(sock)
-                continue
+                #continue
+                break
 
         print(time.asctime() + str(addr) + ':' + data.decode())
 
